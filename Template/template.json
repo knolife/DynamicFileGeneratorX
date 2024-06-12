@@ -1,0 +1,36 @@
+{
+  "fileDescription": {
+    "fileType": "csv",
+    "fileName": "example",
+    "delimiter": ",",
+    "columns": [
+      {
+        "name": "id",
+        "type": "integer",
+        "length": 10,
+        "maxlength": 10,
+        "description": "Unique identifier for each record"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "description": "Name of the person"
+      },
+      {
+        "name": "age",
+        "type": "integer",
+        "description": "Age of the person"
+      },
+      {
+        "name": "email",
+        "type": "string",
+        "description": "Email address of the person"
+      },
+      {
+        "name": "phone",
+        "type": "string",
+        "description": "Phone number of the person"
+      }
+    ]
+  }
+}

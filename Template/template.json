@@ -8,7 +8,7 @@
         "name": "id",
         "type": "integer",
         "length": 10,
-        "maxlength": 10,
+        "maxlength": 11,
         "description": "Unique identifier for each record"
       },
       {

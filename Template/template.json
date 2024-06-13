@@ -3,6 +3,7 @@
     "fileType": "csv",
     "fileName": "example",
     "delimiter": ",",
+    "hasHeader": true,
     "columns": [
       {
         "name": "id",

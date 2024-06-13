@@ -1,4 +1,4 @@
-from faker import Faker
+# from faker import Faker
 from Model.parameter import Parameter
 
 
@@ -8,23 +8,18 @@ def main():
     param = initparameter()
     print(param.to_string())
 
-    #Generate
+    # Generate
     generate(param)
-    #create
-    create(param)
 
 
 def initparameter() -> Parameter:
     return Parameter("./Template/template.json")
 
 
-def generate(param:Parameter):
-    faker = Faker()
-
-
-# create the files
-def create(param):
-    pass
+def generate(param: Parameter):
+    if param.hasheader:
+        pass
+    # faker = Faker()
 
 
 if __name__ == "__main__":

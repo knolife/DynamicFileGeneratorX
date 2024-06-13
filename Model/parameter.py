@@ -8,27 +8,14 @@ class Parameter:
     files: List[Fileparam] = []
 
     def __init__(self, filepath: str):
-        # Open the json template
+        # Open the json template and create the list of fileparam
         try:
             with open(filepath, "r") as f:
                 data = json.load(f)
 
-                # TODO Loop the data once and get separate content
                 for file in data:
                     fileparam = Fileparam(data[file])
                     self.files.append(fileparam)
-
-                '''for item in data["fileDescription"]:
-                    if item == 'fileType':
-                        self.filetype: str = data["fileDescription"][item]
-                    elif item == 'fileName':
-                        self.filename: str = data["fileDescription"][item]
-                    elif item == 'delimiter':
-                        self.delimiter: str = data["fileDescription"][item]
-                    elif item == 'hasHeader':
-                        self.hasheader: bool = data["fileDescription"][item]
-                        if self.hasheader:
-                            self.build_header(data)'''
 
         except FileNotFoundError:
             print(f"Error: The file {filepath} was not found.")
@@ -40,6 +27,7 @@ class Parameter:
             print(f"An unexpected error occurred: {e}")
             raise
 
+    # Detail the content of each file in the template
     def to_string(self) -> str:
         return_str: str = ''
         for file in self.files:

@@ -2,11 +2,12 @@
   "file1": {
     "fileType": "csv",
     "fileName": "example_1",
+    "nbRows": 5,
     "delimiter": "|",
     "hasHeader": true,
     "columns": [
       {
-        "name": "id",
+        "name": "premierchamps",
         "type": "integer",
         "length": 10,
         "maxlength": 11,
@@ -26,17 +27,13 @@
         "name": "email",
         "type": "string",
         "description": "Email address of the person"
-      },
-      {
-        "name": "phone",
-        "type": "string",
-        "description": "Phone number of the person"
       }
     ]
   },
     "file2": {
     "fileType": "csv",
     "fileName": "example_2",
+    "nbRows": 0,
     "delimiter": "|",
     "hasHeader": true,
     "columns": [
@@ -61,11 +58,6 @@
         "name": "email",
         "type": "string",
         "description": "Email address of the person"
-      },
-      {
-        "name": "phone",
-        "type": "string",
-        "description": "Phone number of the person"
       }
     ]
   }

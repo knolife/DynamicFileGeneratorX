@@ -1,8 +1,43 @@
 {
-  "fileDescription": {
+  "file1": {
     "fileType": "csv",
-    "fileName": "example",
-    "delimiter": ",",
+    "fileName": "example_1",
+    "delimiter": "|",
+    "hasHeader": true,
+    "columns": [
+      {
+        "name": "id",
+        "type": "integer",
+        "length": 10,
+        "maxlength": 11,
+        "description": "Unique identifier for each record"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "description": "Name of the person"
+      },
+      {
+        "name": "age",
+        "type": "integer",
+        "description": "Age of the person"
+      },
+      {
+        "name": "email",
+        "type": "string",
+        "description": "Email address of the person"
+      },
+      {
+        "name": "phone",
+        "type": "string",
+        "description": "Phone number of the person"
+      }
+    ]
+  },
+    "file2": {
+    "fileType": "csv",
+    "fileName": "example_2",
+    "delimiter": "|",
     "hasHeader": true,
     "columns": [
       {

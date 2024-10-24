@@ -9,7 +9,7 @@ class Fileparam:
 
     header: str = ''
     headercolumns = []
-    datafield = []
+    datafield = [] 
 
     def __init__(self, file: str):
 

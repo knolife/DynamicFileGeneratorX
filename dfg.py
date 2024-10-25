@@ -1,24 +1,37 @@
 # from faker import Faker
+import logging
 import random
+import pandas as pd
 
 from Model.parameter import Parameter
-import pandas as pd
+
 
 
 # Main method
 def main():
+
+    # Logging setup 
+    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
     # Init
     param = initparameter("./Template/template.json")
+    logging.debug(param.to_string())
     # print(param.to_string())
 
     # Generate
     generate(param, "./output/")
 
-
+# Read the template file located in /Template/ folder
 def initparameter(template_path: str) -> Parameter:
     return Parameter(template_path)
 
 
+"""
+Core generation method. 
+Args :
+    param (Object Parameter) : Represent the template config
+    output (string) : Folder for the generated file output
+"""
 def generate(param: Parameter, output: str):
     # loop for each file
     for file in param.files:

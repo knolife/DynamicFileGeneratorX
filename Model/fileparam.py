@@ -41,5 +41,5 @@ class Fileparam:
                 self.headercolumns.append(column['name'])
 
     def to_string(self):
-        return (f"Hello, my name is {self.filename} and I am {self.filetype} with a delimiter as {self.delimiter}"
+        return (f">>> FILE : {self.filename} TYPE : {self.filetype} DELIMITER {self.delimiter}"
                 + "\nHeader : " + self.header)
